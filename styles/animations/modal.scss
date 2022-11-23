@@ -1,0 +1,19 @@
+@keyframes modal {
+    from {
+        height: 0;
+    }
+
+    to {
+        height: 15rem;
+    }
+}
+
+@keyframes modal_info {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}

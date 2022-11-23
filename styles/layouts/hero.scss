@@ -1,0 +1,80 @@
+@use "../utils" as *;
+
+#hero {
+    position: relative;
+    display: grid;
+    grid-template-rows: 1fr 3fr 1fr;
+    height: calc(100vh - 4rem);
+    padding-top: 4rem;
+
+}
+
+.hero_title {
+    align-self: center;
+
+    h1 {
+        display: inline-block;
+        overflow: hidden;
+        height: $header;
+        font: 800 $header $inter;
+    }
+
+    span {
+        position: relative;
+        top: 14vw;
+
+        animation: load 700ms 300ms forwards;
+    }
+
+    .second {
+        animation-delay: 600ms;
+    }
+
+    p {
+        text-align: right;
+        font-size: max(1rem, 6vw);
+
+        transform: translate(-20px);
+        opacity: 0;
+        animation: load 700ms 900ms forwards;
+    }
+}
+
+.hero_clock {
+    opacity: 0;
+    transform: translate(0, 10px);
+    animation: load 700ms 1000ms forwards;
+
+    p {
+        font-size: $text-small;
+        text-align: center;
+    }
+
+    #date {
+        color: $accent;
+    }
+
+}
+
+.hero_info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    margin-bottom: 1rem;
+
+    p {
+        text-align: left;
+        opacity: 0;
+
+        transform: translate(10%);
+        animation: load 700ms 1000ms forwards;
+    }
+
+    .anchor {
+        justify-self: right;
+
+        opacity: 0;
+        transform: translate(-10%);
+        animation: load 800ms 1000ms forwards;
+    }
+}

@@ -1,0 +1,51 @@
+@use "../utils" as *;
+
+:root {
+    font-family: $inter;
+    font-weight: 700;
+}
+
+body {
+    margin: auto;
+    background-color: $bg;
+    color: $color;
+    height: 100%;
+}
+
+body.modal_active {
+    overflow: hidden;
+}
+
+body.modal_active {
+    overflow: hidden;
+}
+
+section {
+    position: relative;
+    width: 90%;
+    padding-top: 4rem;
+    margin-bottom: 4rem;
+    margin-inline: auto;
+
+    .section_header {
+        display: inline-block;
+        overflow: hidden;
+        height: max($header, 5rem);
+
+        font-size: max($header, 3.25rem);
+        line-height: 1;
+
+        span {
+            position: relative;
+            top: max($header, 5rem);
+        }
+    }
+
+    .section_header.visible {
+
+        span {
+            animation: load 700ms forwards;
+        }
+    }
+
+}

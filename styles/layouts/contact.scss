@@ -1,0 +1,42 @@
+@use "../utils" as *;
+
+#contact {
+    display: grid;
+    gap: 4rem;
+
+    h3 {
+        font-size: $subheader-small;
+        text-align: right;
+    }
+
+    p {
+        font-size: $text-small;
+
+    }
+
+    a {
+        font-size: $text-small;
+
+        svg {
+            height: 12px;
+            width: 12px;
+        }
+    }
+
+    a:last-child {
+        text-align: right;
+    }
+
+    a:hover {
+        color: $accent;
+
+        svg {
+            stroke: $accent;
+        }
+    }
+}
+
+.contact_content {
+    display: grid;
+    gap: 2rem;
+}

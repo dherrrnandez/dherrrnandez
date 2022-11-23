@@ -1,0 +1,25 @@
+@use "../utils" as *;
+
+.anchor {
+    position: relative;
+    width: max-content;
+    display: flex;
+    place-items: center;
+    font-size: $text;
+    cursor: pointer;
+
+    .anchor_svg {
+        padding-left: 5px;
+        width: 18px;
+        height: 18px;
+        stroke: $color;
+    }
+}
+
+.anchor:hover {
+    color: $accent;
+
+    .anchor_svg {
+        stroke: $accent;
+    }
+}

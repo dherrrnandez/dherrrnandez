@@ -1,0 +1,70 @@
+@use "../utils" as *;
+
+#work {
+    display: grid;
+    gap: 4rem;
+}
+
+.work_text {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    text-align: right;
+
+    p {
+        grid-column-start: 2;
+        font-size: $text;
+
+        opacity: 0;
+        transform: translate(-10px);
+        transition: transform 700ms, opacity 700ms;
+    }
+
+    p.visible {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+.work_projects {
+    display: grid;
+
+    transition: opacity 700ms, filter 700ms;
+
+    a {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 12vw;
+
+        opacity: 0;
+        transform: translate(20px) rotate(5deg);
+
+        transition: color 300ms;
+
+        span {
+            color: $accent;
+            font-size: $text-small;
+        }
+    }
+
+    a.visible {
+        animation: load 700ms forwards;
+    }
+
+    a::after {
+        content: '';
+        position: absolute;
+        height: 4px;
+        bottom: 0;
+        left: 0;
+        background: $color;
+
+        width: 0;
+        transition: width 300ms;
+    }
+
+    a:hover::after {
+        width: 100%;
+    }
+}

@@ -1,0 +1,122 @@
+@use "../utils" as *;
+
+.modal_wrapper {
+    position: fixed;
+    z-index: 2;
+    left: 0;
+    display: flex;
+    top: -110%;
+    width: 100%;
+    height: 100%;
+    place-items: center;
+
+    overflow-y: initial;
+
+    transition: top 700ms;
+}
+
+.modal {
+    background-color: $color;
+    overflow-y: auto;
+    margin: auto;
+    padding: 1rem;
+    width: min(800px, 80%);
+    height: 85%;
+}
+
+.modal_info {
+    display: grid;
+    margin-top: 2rem;
+    gap: 2rem;
+}
+
+.modal_close {
+    display: none;
+    position: absolute;
+    width: min(800px, 80%);
+    top: calc(7.5% - 1rem);
+    left: 1.5rem;
+    right: 0;
+    margin: auto;
+    z-index: 1;
+    justify-content: right;
+
+    button {
+        cursor: pointer;
+        background-color: $color;
+    }
+}
+
+.modal_title {
+    height: 15rem;
+
+    display: grid;
+    align-items: flex-end;
+
+    background-color: $bg;
+    color: $color;
+
+    h3 {
+        padding: 0 0 0.5rem 0.5rem;
+        font-size: clamp(2.5rem, 12vw, 7rem);
+        line-height: 1;
+    }
+}
+
+
+.modal {
+    p {
+        color: $bg;
+        font-size: $text;
+    }
+
+    .anchor {
+        color: $bg;
+
+        .anchor_svg {
+            stroke: $bg;
+        }
+    }
+
+    .anchor::after {
+        content: " ";
+        position: absolute;
+        height: 3px;
+        bottom: 0;
+        background-color: $bg;
+
+        width: 40%;
+        transition: width 300ms;
+    }
+
+    .anchor:hover::after {
+        width: 100%;
+    }
+}
+
+.modal_mockups {
+    margin-inline: auto;
+    box-shadow: 5px 5px 10px 0 $accent;
+}
+
+
+
+
+
+.modal_wrapper.active {
+    top: 0;
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+
+    .modal_title {
+        animation: modal 700ms 700ms both;
+    }
+
+    .modal_close {
+        display: grid;
+    }
+
+    .modal_info {
+        animation: modal_info 700ms 1400ms both;
+    }
+}

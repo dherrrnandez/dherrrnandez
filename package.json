@@ -1,0 +1,12 @@
+{
+  "name": "qsine_website",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "watch": "sass --watch styles/main.scss styles/main.css"
+  },
+  "keywords": [],
+  "author": "Dani Hernandez",
+  "license": "ISC"
+}
