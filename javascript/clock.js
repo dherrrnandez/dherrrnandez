@@ -3,13 +3,13 @@ const clock = () => {
     const today = document.getElementById("date")
     const date = new Date()
 
-    let todayDate = date.toLocaleString("en-GB", {
+    let todayDate = date.toLocaleString("en-US", {
         day: "2-digit",
         month: "long",
         year: "numeric"
     })
 
-    let time = date.toLocaleString("en-GB", {
+    let time = date.toLocaleString("en-US", {
         timeZone: "America/Argentina/Buenos_Aires",
         hour: "2-digit",
         minute: "2-digit",
