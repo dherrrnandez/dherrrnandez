@@ -6,6 +6,7 @@ nav {
     left: 0;
     right: 0;
 
+    max-width: 1200px;
     margin: auto;
     display: flex;
     justify-content: space-between;
@@ -117,5 +118,47 @@ body.menu-active {
         #line3 {
             transform: rotate(0) translate(0);
         }
+    }
+}
+
+@media (width > 800px) {
+    #menu {
+        gap: 1rem;
+
+        a {
+            line-height: 1;
+        }
+    }
+}
+
+
+@media (width > 1000px) {
+    nav {
+        border-bottom: 1px solid $accent-dark;
+        width: 90%;
+
+        .nav_wrapper {
+            border-bottom: none;
+        }
+    }
+
+    #hamburger {
+        display: none;
+    }
+
+    #menu {
+        position: static;
+        grid-auto-flow: column;
+        gap: 4rem;
+        justify-content: end;
+        transform: translate(0);
+        background-color: transparent;
+        height: inherit;
+
+        a {
+            font-size: $text;
+        }
+
+
     }
 }

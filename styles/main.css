@@ -26,6 +26,7 @@ body {
   background-color: #1f1d1f;
   color: #ebe3e3;
   height: 100%;
+  max-width: 1200px;
 }
 
 body.modal_active {
@@ -44,20 +45,27 @@ section {
   margin-inline: auto;
 }
 section .section_header {
-  display: inline-block;
+  display: block;
   overflow: hidden;
-  height: max(14.75vw, 5rem);
-  font-size: max(14.75vw, 3.25rem);
+  height: max(14.5vw, 5rem);
+  font-size: max(14.5vw, 3.25rem);
   line-height: 1;
 }
 section .section_header span {
   position: relative;
-  top: max(14.75vw, 5rem);
+  top: min(14.5vw, 5rem);
 }
 section .section_header.visible span {
   animation: load 700ms forwards;
 }
 
+@media (width > 1000px) {
+  section .section_header {
+    height: 11rem;
+    font-size: min(12.75vw, 11rem);
+    width: fit-content;
+  }
+}
 /* MINIMAL CSS RESET BY DANI HERNANDEZ @dherrrnandez */
 :root {
   font-synthesis: none;
@@ -171,6 +179,7 @@ nav {
   top: -10%;
   left: 0;
   right: 0;
+  max-width: 1200px;
   margin: auto;
   display: flex;
   justify-content: space-between;
@@ -247,7 +256,7 @@ nav a:active {
   transition: transform 700ms;
 }
 #menu a {
-  font-size: 14.75vw;
+  font-size: 14.5vw;
   transition: transform 200ms;
 }
 #menu a:active {
@@ -263,6 +272,38 @@ body.menu-active #hamburger #line3 {
   transform: rotate(0) translate(0);
 }
 
+@media (width > 800px) {
+  #menu {
+    gap: 1rem;
+  }
+  #menu a {
+    line-height: 1;
+  }
+}
+@media (width > 1000px) {
+  nav {
+    border-bottom: 1px solid #585858;
+    width: 90%;
+  }
+  nav .nav_wrapper {
+    border-bottom: none;
+  }
+  #hamburger {
+    display: none;
+  }
+  #menu {
+    position: static;
+    grid-auto-flow: column;
+    gap: 4rem;
+    justify-content: end;
+    transform: translate(0);
+    background-color: transparent;
+    height: inherit;
+  }
+  #menu a {
+    font-size: 1.5rem;
+  }
+}
 #hero {
   position: relative;
   display: grid;
@@ -277,8 +318,8 @@ body.menu-active #hamburger #line3 {
 .hero_title h1 {
   display: inline-block;
   overflow: hidden;
-  height: 14.75vw;
-  font: 800 14.75vw "Inter", sans-serif;
+  height: 14.5vw;
+  font: 800 14.5vw "Inter", sans-serif;
 }
 .hero_title span {
   position: relative;
@@ -328,6 +369,35 @@ body.menu-active #hamburger #line3 {
   animation: load 800ms 1000ms forwards;
 }
 
+@media (width > 1000px) {
+  #hero {
+    grid-template-rows: 1fr 3fr 3fr;
+  }
+  .hero_clock p {
+    font-size: 1.5rem;
+  }
+  .hero_title h1 {
+    height: min(12.75vw, 11rem);
+    font-size: min(12.75vw, 11rem);
+  }
+  .hero_title p {
+    display: none;
+  }
+  .hero_info {
+    grid-template-columns: 1fr 1fr;
+  }
+  .hero_info p {
+    line-height: 1.2;
+    font-size: 2rem;
+  }
+  .hero_info .anchor {
+    font-size: 3rem;
+  }
+  .hero_info .anchor .anchor_svg {
+    height: 36px;
+    width: 36px;
+  }
+}
 #work {
   display: grid;
   gap: 4rem;
@@ -385,7 +455,23 @@ body.menu-active #hamburger #line3 {
   width: 100%;
 }
 
+@media (width > 1000px) {
+  .work_text p {
+    font-size: 3rem;
+  }
+  .work_projects a {
+    font-size: min(8vw, 9rem);
+    line-height: 1.25;
+  }
+  .work_projects a span {
+    font-size: 2rem;
+  }
+}
 #about {
+  display: grid;
+  gap: 4rem;
+}
+#about .about_heading {
   display: grid;
   gap: 4rem;
 }
@@ -393,19 +479,21 @@ body.menu-active #hamburger #line3 {
   margin: auto;
   opacity: 0;
   scale: 0.8;
-  width: 250px;
+  width: 200px;
   height: 30px;
   overflow: hidden;
   transition: height 1400ms;
 }
 #about .about_wrapper img {
-  width: 100%;
-  height: 100%;
   object-fit: cover;
   scale: 1.2;
 }
+#about .about_heading_text_wrapper {
+  display: grid;
+  gap: 4rem;
+}
 #about .about_wrapper.visible {
-  height: 300px;
+  height: 250px;
   animation: load 700ms forwards;
 }
 #about h3 {
@@ -428,6 +516,52 @@ body.menu-active #hamburger #line3 {
   height: 12px;
 }
 
+@media (width > 700px) {
+  #about .about_wrapper {
+    width: 250px;
+    height: 30px;
+  }
+  #about .about_wrapper.visible {
+    height: 300px;
+  }
+}
+@media (width > 1000px) {
+  #about h3 {
+    font-size: min(9vw, 7rem);
+  }
+  #about h4 {
+    font-size: 3rem;
+  }
+  #about p {
+    font-size: 2rem;
+  }
+  #about p a {
+    font-size: 2rem;
+  }
+  #about p a svg {
+    width: 22px;
+    height: 22px;
+  }
+  #about .about_wrapper {
+    width: 225px;
+    height: 30px;
+  }
+  #about .about_wrapper.visible {
+    height: 375px;
+  }
+  .about_heading {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (width > 1200px) {
+  #about .about_wrapper {
+    width: 300px;
+    height: 30px;
+  }
+  #about .about_wrapper.visible {
+    height: 375px;
+  }
+}
 #contact {
   display: grid;
   gap: 4rem;
@@ -461,6 +595,21 @@ body.menu-active #hamburger #line3 {
   gap: 2rem;
 }
 
+@media (width > 1000px) {
+  #contact h3 {
+    font-size: 3rem;
+  }
+  #contact p {
+    font-size: 2rem;
+  }
+  #contact a {
+    font-size: 2rem;
+  }
+  #contact a svg {
+    height: 22px;
+    width: 22px;
+  }
+}
 .modal_wrapper {
   position: fixed;
   z-index: 2;

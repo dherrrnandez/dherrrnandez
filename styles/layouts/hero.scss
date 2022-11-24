@@ -78,3 +78,46 @@
         animation: load 800ms 1000ms forwards;
     }
 }
+
+@media (width > 1000px) {
+    #hero {
+        grid-template-rows: 1fr 3fr 3fr;
+    }
+
+    .hero_clock {
+
+        p {
+            font-size: $text;
+        }
+    }
+
+    .hero_title {
+
+        h1 {
+            height: min($des-header, 11rem);
+            font-size: min($des-header, 11rem);
+        }
+
+        p {
+            display: none;
+        }
+    }
+
+    .hero_info {
+        grid-template-columns: 1fr 1fr;
+
+        p {
+            line-height: 1.2;
+            font-size: $subheader-small;
+        }
+
+        .anchor {
+            font-size: $subheader;
+
+            .anchor_svg {
+                height: 36px;
+                width: 36px;
+            }
+        }
+    }
+}

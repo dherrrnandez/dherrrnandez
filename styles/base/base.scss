@@ -10,6 +10,7 @@ body {
     background-color: $bg;
     color: $color;
     height: 100%;
+    max-width: 1200px;
 }
 
 body.modal_active {
@@ -28,7 +29,7 @@ section {
     margin-inline: auto;
 
     .section_header {
-        display: inline-block;
+        display: block;
         overflow: hidden;
         height: max($header, 5rem);
 
@@ -37,7 +38,7 @@ section {
 
         span {
             position: relative;
-            top: max($header, 5rem);
+            top: min($header, 5rem);
         }
     }
 
@@ -47,5 +48,15 @@ section {
             animation: load 700ms forwards;
         }
     }
+}
 
+@media (width > 1000px) {
+    section {
+
+        .section_header {
+            height: 11rem;
+            font-size: min($des-header, 11rem);
+            width: fit-content;
+        }
+    }
 }

@@ -40,3 +40,26 @@
     display: grid;
     gap: 2rem;
 }
+
+@media (width > 1000px) {
+    #contact {
+        h3 {
+            font-size: $subheader;
+        }
+
+        p {
+            font-size: $subheader-small;
+
+        }
+
+        a {
+            font-size: $subheader-small;
+
+            svg {
+                height: 22px;
+                width: 22px;
+            }
+        }
+    }
+
+}

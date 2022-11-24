@@ -68,3 +68,23 @@
         width: 100%;
     }
 }
+
+@media (width > 1000px) {
+
+    .work_text {
+        p {
+            font-size: $subheader;
+        }
+    }
+
+    .work_projects {
+        a {
+            font-size: min(8vw, 9rem);
+            line-height: 1.25;
+
+            span {
+                font-size: $subheader-small;
+            }
+        }
+    }
+}
