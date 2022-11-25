@@ -65,7 +65,7 @@
     }
 }
 
-@media (width > 500px) {
+@media (min-width: 500px) and (max-width: 1000px) {
 
     .work_subheader {
         font-size: $subheader-small;
@@ -73,7 +73,7 @@
     }
 }
 
-@media (width > 1000px) {
+@media (min-width: 1000px) {
 
     #work {
         gap: 8rem;
