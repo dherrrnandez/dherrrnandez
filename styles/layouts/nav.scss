@@ -121,7 +121,7 @@ body.menu-active {
     }
 }
 
-@media (min-width: 800px) (max-width: 1000px) {
+@media (min-width: 800px) and (max-width: 1000px) {
     #menu {
         gap: 1rem;
 
