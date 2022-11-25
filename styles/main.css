@@ -373,7 +373,7 @@ body.menu-active #hamburger #line3 {
   animation: load 800ms 1000ms forwards;
 }
 
-@media (500px < width < 1000px) {
+@media (min-width: 300px) and (max-width: 1000px) {
   .hero_info p {
     font-size: 1.5rem;
   }
@@ -381,7 +381,7 @@ body.menu-active #hamburger #line3 {
     font-size: 2rem;
   }
 }
-@media (width > 1000px) {
+@media (min-width: 1000px) {
   #hero {
     height: calc(100vh - 2rem);
   }

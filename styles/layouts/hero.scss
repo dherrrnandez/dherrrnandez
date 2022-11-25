@@ -80,7 +80,7 @@
     }
 }
 
-@media (500px < width < 1000px) {
+@media (min-width: 300px) and (max-width: 1000px) {
     .hero_info {
         p {
             font-size: $text;
@@ -92,7 +92,7 @@
     }
 }
 
-@media (width > 1000px) {
+@media (min-width: 1000px) {
     #hero {
         height: calc(100vh - 2rem);
 
