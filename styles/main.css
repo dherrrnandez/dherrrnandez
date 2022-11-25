@@ -326,8 +326,8 @@ body.menu-active #hamburger #line3 {
 .hero_title h1 {
   display: inline-block;
   overflow: hidden;
-  height: 2.5rem;
-  font: 800 2.5rem "Inter", sans-serif;
+  height: min(14.5vw, 7rem);
+  font: 800 calc(min(14.5vw, 7rem) - 0.25rem) "Inter", sans-serif;
 }
 .hero_title span {
   position: relative;
