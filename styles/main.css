@@ -337,14 +337,6 @@ body.menu-active #hamburger #line3 {
 .hero_title .second {
   animation-delay: 600ms;
 }
-.hero_title p {
-  display: none;
-  text-align: right;
-  font-size: min(3rem, 7vw);
-  transform: translate(-20px);
-  opacity: 0;
-  animation: load 700ms 900ms forwards;
-}
 
 .hero_clock {
   display: block;
@@ -391,9 +383,6 @@ body.menu-active #hamburger #line3 {
     height: min(14.5vw, 7rem);
     font-size: min(14.5vw, 7rem);
   }
-  .hero_title p {
-    display: block;
-  }
 }
 @media (min-width: 1000px) {
   #hero {
@@ -402,9 +391,6 @@ body.menu-active #hamburger #line3 {
   #hero .hero_title h1 {
     height: 7rem;
     font-size: 7rem;
-  }
-  #hero .hero_title p {
-    display: none;
   }
   #hero .hero_info {
     grid-template-columns: 1fr 1fr;
