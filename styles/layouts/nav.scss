@@ -121,6 +121,15 @@ body.menu-active {
     }
 }
 
+@media (min-width: 300px) and (max-width: 400px) {
+    nav {
+
+        a {
+            font-size: $text-small;
+        }
+    }
+}
+
 @media (min-width: 800px) and (max-width: 1000px) {
     #menu {
         gap: 1rem;

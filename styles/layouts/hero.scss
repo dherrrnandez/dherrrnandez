@@ -3,7 +3,7 @@
 #hero {
     position: relative;
     display: grid;
-    grid-template-rows: 1fr 2fr 2fr;
+    grid-template-rows: 1fr 3fr 3fr;
     height: calc(100vh - 4rem);
     padding-top: 4rem;
 
@@ -15,8 +15,8 @@
     h1 {
         display: inline-block;
         overflow: hidden;
-        height: $header;
-        font: 800 $header $inter;
+        height: 2.5rem;
+        font: 800 2.5rem $inter;
     }
 
     span {
@@ -82,7 +82,7 @@
     }
 }
 
-@media (min-width: 300px) and (max-width: 1000px) {
+@media (min-width: 375px) and (max-width: 1000px) {
     .hero_info {
         p {
             font-size: $text;
@@ -91,6 +91,15 @@
         .anchor {
             font-size: $subheader-small;
         }
+    }
+
+    .hero_title {
+
+        h1 {
+            height: $header;
+            font-size: $header;
+        }
+
     }
 }
 

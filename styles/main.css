@@ -275,6 +275,11 @@ body.menu-active #hamburger #line3 {
   transform: rotate(0) translate(0);
 }
 
+@media (min-width: 300px) and (max-width: 400px) {
+  nav a {
+    font-size: 1.2rem;
+  }
+}
 @media (min-width: 800px) and (max-width: 1000px) {
   #menu {
     gap: 1rem;
@@ -310,7 +315,7 @@ body.menu-active #hamburger #line3 {
 #hero {
   position: relative;
   display: grid;
-  grid-template-rows: 1fr 2fr 2fr;
+  grid-template-rows: 1fr 3fr 3fr;
   height: calc(100vh - 4rem);
   padding-top: 4rem;
 }
@@ -321,8 +326,8 @@ body.menu-active #hamburger #line3 {
 .hero_title h1 {
   display: inline-block;
   overflow: hidden;
-  height: min(14.5vw, 7rem);
-  font: 800 min(14.5vw, 7rem) "Inter", sans-serif;
+  height: 2.5rem;
+  font: 800 2.5rem "Inter", sans-serif;
 }
 .hero_title span {
   position: relative;
@@ -374,12 +379,16 @@ body.menu-active #hamburger #line3 {
   animation: load 800ms 1000ms forwards;
 }
 
-@media (min-width: 300px) and (max-width: 1000px) {
+@media (min-width: 375px) and (max-width: 1000px) {
   .hero_info p {
     font-size: 1.5rem;
   }
   .hero_info .anchor {
     font-size: 2rem;
+  }
+  .hero_title h1 {
+    height: min(14.5vw, 7rem);
+    font-size: min(14.5vw, 7rem);
   }
 }
 @media (min-width: 1000px) {
