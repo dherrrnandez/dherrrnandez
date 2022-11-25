@@ -41,6 +41,8 @@
 }
 
 .hero_clock {
+    display: block;
+
     opacity: 0;
     transform: translate(0, 10px);
     animation: load 700ms 1000ms forwards;
