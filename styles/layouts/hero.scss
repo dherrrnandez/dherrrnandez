@@ -31,6 +31,7 @@
     }
 
     p {
+        display: none;
         text-align: right;
         font-size: min(3rem, 7vw);
 
@@ -98,6 +99,10 @@
         h1 {
             height: $header;
             font-size: $header;
+        }
+
+        p {
+            display: block;
         }
 
     }

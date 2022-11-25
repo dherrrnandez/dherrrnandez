@@ -338,6 +338,7 @@ body.menu-active #hamburger #line3 {
   animation-delay: 600ms;
 }
 .hero_title p {
+  display: none;
   text-align: right;
   font-size: min(3rem, 7vw);
   transform: translate(-20px);
@@ -389,6 +390,9 @@ body.menu-active #hamburger #line3 {
   .hero_title h1 {
     height: min(14.5vw, 7rem);
     font-size: min(14.5vw, 7rem);
+  }
+  .hero_title p {
+    display: block;
   }
 }
 @media (min-width: 1000px) {
