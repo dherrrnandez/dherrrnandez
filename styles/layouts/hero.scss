@@ -80,6 +80,18 @@
     }
 }
 
+@media (500px < width < 1000px) {
+    .hero_info {
+        p {
+            font-size: $text;
+        }
+
+        .anchor {
+            font-size: $subheader-small;
+        }
+    }
+}
+
 @media (width > 1000px) {
     #hero {
         height: calc(100vh - 2rem);
@@ -122,18 +134,6 @@
                     width: 36px;
                 }
             }
-        }
-    }
-}
-
-@media (width > 500px) {
-    .hero_info {
-        p {
-            font-size: $text;
-        }
-
-        .anchor {
-            font-size: $subheader-small;
         }
     }
 }
