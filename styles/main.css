@@ -552,6 +552,9 @@ body.menu-active #hamburger #line3 {
   .about_heading {
     grid-template-columns: 1fr 1fr;
   }
+  .about_heading .about_heading_text_wrapper h3 {
+    text-align: right;
+  }
 }
 @media (width > 1200px) {
   #about .about_wrapper {
@@ -643,7 +646,7 @@ body.menu-active #hamburger #line3 {
   position: absolute;
   width: min(800px, 80%);
   top: calc(7.5% - 1rem);
-  left: 1.5rem;
+  left: 2rem;
   right: 0;
   margin: auto;
   z-index: 1;

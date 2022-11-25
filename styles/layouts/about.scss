@@ -99,6 +99,7 @@
             }
         }
 
+
         .about_wrapper {
             width: 225px;
             height: 30px;
@@ -111,6 +112,12 @@
 
     .about_heading {
         grid-template-columns: 1fr 1fr;
+
+        .about_heading_text_wrapper {
+            h3 {
+                text-align: right;
+            }
+        }
     }
 }
 
