@@ -385,32 +385,32 @@ body.menu-active #hamburger #line3 {
   #hero {
     height: calc(100vh - 2rem);
   }
-  .hero_clock {
+  #hero .hero_clock {
     display: flex;
     gap: 2rem;
     justify-content: center;
   }
-  .hero_clock p {
+  #hero .hero_clock p {
     font-size: 1.5rem;
   }
-  .hero_title h1 {
+  #hero .hero_title h1 {
     height: 7rem;
     font-size: 7rem;
   }
-  .hero_title p {
+  #hero .hero_title p {
     display: none;
   }
-  .hero_info {
+  #hero .hero_info {
     grid-template-columns: 1fr 1fr;
   }
-  .hero_info p {
+  #hero .hero_info p {
     line-height: 1.2;
     font-size: 2rem;
   }
-  .hero_info .anchor {
+  #hero .hero_info .anchor {
     font-size: 3rem;
   }
-  .hero_info .anchor .anchor_svg {
+  #hero .hero_info .anchor .anchor_svg {
     height: 36px;
     width: 36px;
   }

@@ -95,45 +95,46 @@
 @media (width > 1000px) {
     #hero {
         height: calc(100vh - 2rem);
-    }
 
-    .hero_clock {
-        display: flex;
-        gap: 2rem;
-        justify-content: center;
+        .hero_clock {
+            display: flex;
+            gap: 2rem;
+            justify-content: center;
 
-        p {
-            font-size: $text;
-        }
-    }
-
-    .hero_title {
-
-        h1 {
-            height: 7rem;
-            font-size: 7rem;
+            p {
+                font-size: $text;
+            }
         }
 
-        p {
-            display: none;
+        .hero_title {
+
+            h1 {
+                height: 7rem;
+                font-size: 7rem;
+            }
+
+            p {
+                display: none;
+            }
         }
-    }
 
-    .hero_info {
-        grid-template-columns: 1fr 1fr;
+        .hero_info {
+            grid-template-columns: 1fr 1fr;
 
-        p {
-            line-height: 1.2;
-            font-size: $subheader-small;
-        }
+            p {
+                line-height: 1.2;
+                font-size: $subheader-small;
+            }
 
-        .anchor {
-            font-size: $subheader;
+            .anchor {
+                font-size: $subheader;
 
-            .anchor_svg {
-                height: 36px;
-                width: 36px;
+                .anchor_svg {
+                    height: 36px;
+                    width: 36px;
+                }
             }
         }
     }
+
 }
