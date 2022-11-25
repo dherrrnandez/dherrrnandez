@@ -28,6 +28,11 @@
     .about_heading_text_wrapper {
         display: grid;
         gap: 4rem;
+
+        h4 {
+            justify-self: right;
+            width: 250px;
+        }
     }
 
     .about_wrapper.visible {
@@ -41,12 +46,24 @@
     }
 
     h4 {
+        width: 240px;
+        justify-self: right;
         text-align: right;
         font-size: $subheader-small;
         line-height: 1.25;
+        opacity: 0;
+        transform: translate(-10px);
+        transition: transform 700ms, opacity 700ms;
+    }
+
+    h4.visible {
+        opacity: 1;
+        transform: translate(0);
     }
 
     p {
+        font-size: $text-small;
+
         span {
             text-decoration: underline;
         }
@@ -62,8 +79,34 @@
     }
 }
 
-@media (width > 700px) {
+@media (width > 500px) {
     #about {
+
+        p {
+            font-size: $text;
+
+            a {
+                font-size: $text;
+
+                svg {
+                    height: 18px;
+                    width: 18px;
+                }
+            }
+        }
+
+        .about_heading_text_wrapper {
+            h4 {
+                justify-self: right;
+                width: 300px;
+            }
+        }
+
+        h4 {
+            font-size: $subheader;
+            width: 350px;
+        }
+
         .about_wrapper {
             width: 250px;
             height: 30px;
@@ -78,12 +121,28 @@
 @media (width > 1000px) {
 
     #about {
+        gap: 8rem;
+
+        .about_heading {
+            gap: 0;
+        }
+
+        .about_heading_text_wrapper {
+            gap: 2rem;
+
+            h4 {
+                justify-self: right;
+                width: auto;
+            }
+        }
+
         h3 {
             font-size: min(9vw, 7rem);
         }
 
         h4 {
             font-size: $subheader;
+            width: 700px;
         }
 
         p {

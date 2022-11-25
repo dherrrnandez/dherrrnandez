@@ -11,11 +11,12 @@ $accent-dark: #585858;
 // FONT SIZES
 
 //mobile
-$header: 14.5vw;
+// $header: 14.5vw;
+$header: min(14.5vw, 7rem);
 $subheader: 3rem;
 $subheader-small: 2rem;
 $text: 1.5rem;
-$text-small: 1rem;
+$text-small: 1.2rem;
 
 //desktop
-$des-header: 12.75vw;
+$des-header: 7rem;

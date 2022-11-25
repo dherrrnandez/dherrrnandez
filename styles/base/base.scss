@@ -52,10 +52,11 @@ section {
 
 @media (width > 1000px) {
     section {
+        margin-bottom: 8rem;
 
         .section_header {
-            height: 11rem;
-            font-size: min($des-header, 11rem);
+            height: $des-header;
+            font-size: $des-header;
             width: fit-content;
         }
     }

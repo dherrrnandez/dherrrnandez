@@ -20,7 +20,7 @@
     overflow-y: auto;
     margin: auto;
     padding: 1rem;
-    width: min(800px, 80%);
+    width: min(700px, 80%);
     height: 85%;
 }
 
@@ -33,7 +33,7 @@
 .modal_close {
     display: none;
     position: absolute;
-    width: min(800px, 80%);
+    width: min(700px, 80%);
     top: calc(7.5% - 1rem);
     left: 2rem;
     right: 0;
@@ -117,6 +117,18 @@
     }
 
     .modal_info {
+        p {
+            color: $bg;
+        }
+
         animation: modal_info 700ms 1400ms both;
+    }
+}
+
+@media (width > 1000px) {
+    .modal_wrapper.active {
+        .modal_title {
+            animation: modal-desktop 700ms 700ms both;
+        }
     }
 }

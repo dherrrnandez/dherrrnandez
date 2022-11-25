@@ -47,22 +47,25 @@ section {
 section .section_header {
   display: block;
   overflow: hidden;
-  height: max(14.5vw, 5rem);
-  font-size: max(14.5vw, 3.25rem);
+  height: max(min(14.5vw, 7rem), 5rem);
+  font-size: max(min(14.5vw, 7rem), 3.25rem);
   line-height: 1;
 }
 section .section_header span {
   position: relative;
-  top: min(14.5vw, 5rem);
+  top: min(min(14.5vw, 7rem), 5rem);
 }
 section .section_header.visible span {
   animation: load 700ms forwards;
 }
 
 @media (width > 1000px) {
+  section {
+    margin-bottom: 8rem;
+  }
   section .section_header {
-    height: 11rem;
-    font-size: min(12.75vw, 11rem);
+    height: 7rem;
+    font-size: 7rem;
     width: fit-content;
   }
 }
@@ -256,7 +259,7 @@ nav a:active {
   transition: transform 700ms;
 }
 #menu a {
-  font-size: 14.5vw;
+  font-size: min(14.5vw, 7rem);
   transition: transform 200ms;
 }
 #menu a:active {
@@ -307,7 +310,7 @@ body.menu-active #hamburger #line3 {
 #hero {
   position: relative;
   display: grid;
-  grid-template-rows: 1fr 3fr 1fr;
+  grid-template-rows: 1fr 2fr 2fr;
   height: calc(100vh - 4rem);
   padding-top: 4rem;
 }
@@ -318,8 +321,8 @@ body.menu-active #hamburger #line3 {
 .hero_title h1 {
   display: inline-block;
   overflow: hidden;
-  height: 14.5vw;
-  font: 800 14.5vw "Inter", sans-serif;
+  height: min(14.5vw, 7rem);
+  font: 800 min(14.5vw, 7rem) "Inter", sans-serif;
 }
 .hero_title span {
   position: relative;
@@ -331,7 +334,7 @@ body.menu-active #hamburger #line3 {
 }
 .hero_title p {
   text-align: right;
-  font-size: max(1rem, 6vw);
+  font-size: min(3rem, 7vw);
   transform: translate(-20px);
   opacity: 0;
   animation: load 700ms 900ms forwards;
@@ -343,7 +346,7 @@ body.menu-active #hamburger #line3 {
   animation: load 700ms 1000ms forwards;
 }
 .hero_clock p {
-  font-size: 1rem;
+  font-size: 1.2rem;
   text-align: center;
 }
 .hero_clock #date {
@@ -357,6 +360,7 @@ body.menu-active #hamburger #line3 {
   margin-bottom: 1rem;
 }
 .hero_info p {
+  font-size: 1.2rem;
   text-align: left;
   opacity: 0;
   transform: translate(10%);
@@ -369,16 +373,29 @@ body.menu-active #hamburger #line3 {
   animation: load 800ms 1000ms forwards;
 }
 
+@media (width > 500px) {
+  .hero_info p {
+    font-size: 1.5rem;
+  }
+  .hero_info .anchor {
+    font-size: 2rem;
+  }
+}
 @media (width > 1000px) {
   #hero {
-    grid-template-rows: 1fr 3fr 3fr;
+    height: calc(100vh - 2rem);
+  }
+  .hero_clock {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
   }
   .hero_clock p {
     font-size: 1.5rem;
   }
   .hero_title h1 {
-    height: min(12.75vw, 11rem);
-    font-size: min(12.75vw, 11rem);
+    height: 7rem;
+    font-size: 7rem;
   }
   .hero_title p {
     display: none;
@@ -402,20 +419,16 @@ body.menu-active #hamburger #line3 {
   display: grid;
   gap: 4rem;
 }
-
-.work_text {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  text-align: right;
-}
-.work_text p {
-  grid-column-start: 2;
+#work p {
   font-size: 1.5rem;
+  justify-self: right;
+  width: 250px;
+  text-align: right;
   opacity: 0;
   transform: translate(-10px);
   transition: transform 700ms, opacity 700ms;
 }
-.work_text p.visible {
+#work p.visible {
   opacity: 1;
   transform: translate(0);
 }
@@ -429,14 +442,14 @@ body.menu-active #hamburger #line3 {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  font-size: 12vw;
+  font-size: calc(min(14.5vw, 7rem) - 1rem);
   opacity: 0;
   transform: translate(20px) rotate(5deg);
   transition: color 300ms;
 }
 .work_projects a span {
   color: #adadad;
-  font-size: 1rem;
+  font-size: 1.2rem;
 }
 .work_projects a.visible {
   animation: load 700ms forwards;
@@ -455,12 +468,22 @@ body.menu-active #hamburger #line3 {
   width: 100%;
 }
 
+@media (width > 500px) {
+  #work p {
+    font-size: 2rem;
+    width: 350px;
+  }
+}
 @media (width > 1000px) {
-  .work_text p {
+  #work {
+    gap: 8rem;
+  }
+  #work p {
     font-size: 3rem;
+    width: 450px;
   }
   .work_projects a {
-    font-size: min(8vw, 9rem);
+    font-size: 6rem;
     line-height: 1.25;
   }
   .work_projects a span {
@@ -492,6 +515,10 @@ body.menu-active #hamburger #line3 {
   display: grid;
   gap: 4rem;
 }
+#about .about_heading_text_wrapper h4 {
+  justify-self: right;
+  width: 250px;
+}
 #about .about_wrapper.visible {
   height: 250px;
   animation: load 700ms forwards;
@@ -501,22 +528,52 @@ body.menu-active #hamburger #line3 {
   line-height: 1;
 }
 #about h4 {
+  width: 240px;
+  justify-self: right;
   text-align: right;
   font-size: 2rem;
   line-height: 1.25;
+  opacity: 0;
+  transform: translate(-10px);
+  transition: transform 700ms, opacity 700ms;
+}
+#about h4.visible {
+  opacity: 1;
+  transform: translate(0);
+}
+#about p {
+  font-size: 1.2rem;
 }
 #about p span {
   text-decoration: underline;
 }
 #about p a {
-  font-size: 1rem;
+  font-size: 1.2rem;
 }
 #about p a svg {
   width: 12px;
   height: 12px;
 }
 
-@media (width > 700px) {
+@media (width > 500px) {
+  #about p {
+    font-size: 1.5rem;
+  }
+  #about p a {
+    font-size: 1.5rem;
+  }
+  #about p a svg {
+    height: 18px;
+    width: 18px;
+  }
+  #about .about_heading_text_wrapper h4 {
+    justify-self: right;
+    width: 300px;
+  }
+  #about h4 {
+    font-size: 3rem;
+    width: 350px;
+  }
   #about .about_wrapper {
     width: 250px;
     height: 30px;
@@ -526,11 +583,25 @@ body.menu-active #hamburger #line3 {
   }
 }
 @media (width > 1000px) {
+  #about {
+    gap: 8rem;
+  }
+  #about .about_heading {
+    gap: 0;
+  }
+  #about .about_heading_text_wrapper {
+    gap: 2rem;
+  }
+  #about .about_heading_text_wrapper h4 {
+    justify-self: right;
+    width: auto;
+  }
   #about h3 {
     font-size: min(9vw, 7rem);
   }
   #about h4 {
     font-size: 3rem;
+    width: 700px;
   }
   #about p {
     font-size: 2rem;
@@ -568,16 +639,24 @@ body.menu-active #hamburger #line3 {
 #contact {
   display: grid;
   gap: 4rem;
+  padding-bottom: 4rem;
 }
 #contact h3 {
   font-size: 2rem;
   text-align: right;
+  opacity: 0;
+  transform: translate(-10px);
+  transition: transform 700ms, opacity 700ms;
+}
+#contact h3.visible {
+  opacity: 1;
+  transform: translate(0);
 }
 #contact p {
-  font-size: 1rem;
+  font-size: 1.2rem;
 }
 #contact a {
-  font-size: 1rem;
+  font-size: 1.2rem;
 }
 #contact a svg {
   height: 12px;
@@ -596,9 +675,29 @@ body.menu-active #hamburger #line3 {
 .contact_content {
   display: grid;
   gap: 2rem;
+  text-transform: uppercase;
 }
 
+@media (width > 500px) {
+  #contact .contact_mail {
+    display: flex;
+    gap: 1rem;
+  }
+  #contact p {
+    font-size: 1.5rem;
+  }
+  #contact a {
+    font-size: 1.5rem;
+  }
+  #contact a svg {
+    height: 18px;
+    width: 18px;
+  }
+}
 @media (width > 1000px) {
+  #contact {
+    gap: 8rem;
+  }
   #contact h3 {
     font-size: 3rem;
   }
@@ -631,7 +730,7 @@ body.menu-active #hamburger #line3 {
   overflow-y: auto;
   margin: auto;
   padding: 1rem;
-  width: min(800px, 80%);
+  width: min(700px, 80%);
   height: 85%;
 }
 
@@ -644,7 +743,7 @@ body.menu-active #hamburger #line3 {
 .modal_close {
   display: none;
   position: absolute;
-  width: min(800px, 80%);
+  width: min(700px, 80%);
   top: calc(7.5% - 1rem);
   left: 2rem;
   right: 0;
@@ -712,7 +811,15 @@ body.menu-active #hamburger #line3 {
 .modal_wrapper.active .modal_info {
   animation: modal_info 700ms 1400ms both;
 }
+.modal_wrapper.active .modal_info p {
+  color: #1f1d1f;
+}
 
+@media (width > 1000px) {
+  .modal_wrapper.active .modal_title {
+    animation: modal-desktop 700ms 700ms both;
+  }
+}
 @keyframes load {
   to {
     opacity: 1;
@@ -735,6 +842,14 @@ body.menu-active #hamburger #line3 {
   }
   100% {
     opacity: 1;
+  }
+}
+@keyframes modal-desktop {
+  from {
+    height: 0;
+  }
+  to {
+    height: 25rem;
   }
 }
 

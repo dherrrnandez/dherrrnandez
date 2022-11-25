@@ -17,3 +17,13 @@
         opacity: 1;
     }
 }
+
+@keyframes modal-desktop {
+    from {
+        height: 0;
+    }
+
+    to {
+        height: 25rem;
+    }
+}

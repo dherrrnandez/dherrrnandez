@@ -1,6 +1,6 @@
 const hiddenElements = document.querySelectorAll(".to_load")
 
-// window.scrollTo(0, 0)
+window.scrollTo(0, 0)
 
 const loadTitles = (entry, observer) => {
     entry.forEach((entry) => {
@@ -12,7 +12,7 @@ const loadTitles = (entry, observer) => {
 
 const observer = new IntersectionObserver(loadTitles, {
     root: null,
-    rootMargin: "-20px",
+    rootMargin: "-40px",
     threshold: 0.5
 })
 

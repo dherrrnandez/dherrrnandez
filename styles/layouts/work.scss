@@ -3,16 +3,12 @@
 #work {
     display: grid;
     gap: 4rem;
-}
-
-.work_text {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    text-align: right;
 
     p {
-        grid-column-start: 2;
         font-size: $text;
+        justify-self: right;
+        width: 250px;
+        text-align: right;
 
         opacity: 0;
         transform: translate(-10px);
@@ -35,7 +31,7 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        font-size: 12vw;
+        font-size: calc($header - 1rem);
 
         opacity: 0;
         transform: translate(20px) rotate(5deg);
@@ -69,17 +65,30 @@
     }
 }
 
+@media (width > 500px) {
+    #work {
+
+        p {
+            font-size: $subheader-small;
+            width: 350px;
+        }
+    }
+}
+
 @media (width > 1000px) {
 
-    .work_text {
+    #work {
+        gap: 8rem;
+
         p {
             font-size: $subheader;
+            width: 450px;
         }
     }
 
     .work_projects {
         a {
-            font-size: min(8vw, 9rem);
+            font-size: calc($des-header - 1rem);
             line-height: 1.25;
 
             span {
