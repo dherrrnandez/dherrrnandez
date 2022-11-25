@@ -96,16 +96,6 @@
     #hero {
         height: calc(100vh - 2rem);
 
-        .hero_clock {
-            display: flex;
-            gap: 2rem;
-            justify-content: center;
-
-            p {
-                font-size: $text;
-            }
-        }
-
         .hero_title {
 
             h1 {
@@ -134,6 +124,16 @@
                     width: 36px;
                 }
             }
+        }
+    }
+
+    .hero_clock {
+        display: -webkit-flex;
+        gap: 2rem;
+        justify-content: center;
+
+        p {
+            font-size: $text;
         }
     }
 }

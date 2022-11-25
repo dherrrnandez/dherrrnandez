@@ -385,14 +385,6 @@ body.menu-active #hamburger #line3 {
   #hero {
     height: calc(100vh - 2rem);
   }
-  #hero .hero_clock {
-    display: flex;
-    gap: 2rem;
-    justify-content: center;
-  }
-  #hero .hero_clock p {
-    font-size: 1.5rem;
-  }
   #hero .hero_title h1 {
     height: 7rem;
     font-size: 7rem;
@@ -414,12 +406,21 @@ body.menu-active #hamburger #line3 {
     height: 36px;
     width: 36px;
   }
+  .hero_clock {
+    display: -webkit-flex;
+    gap: 2rem;
+    justify-content: center;
+  }
+  .hero_clock p {
+    font-size: 1.5rem;
+  }
 }
 #work {
   display: grid;
   gap: 4rem;
 }
-#work p {
+
+.work_subheader {
   font-size: 1.5rem;
   justify-self: right;
   width: 250px;
@@ -428,7 +429,8 @@ body.menu-active #hamburger #line3 {
   transform: translate(-10px);
   transition: transform 700ms, opacity 700ms;
 }
-#work p.visible {
+
+.work_subheader.visible {
   opacity: 1;
   transform: translate(0);
 }
@@ -469,7 +471,7 @@ body.menu-active #hamburger #line3 {
 }
 
 @media (width > 500px) {
-  #work p {
+  .work_subheader {
     font-size: 2rem;
     width: 350px;
   }
@@ -478,7 +480,7 @@ body.menu-active #hamburger #line3 {
   #work {
     gap: 8rem;
   }
-  #work p {
+  .work_subheader {
     font-size: 3rem;
     width: 450px;
   }

@@ -3,22 +3,22 @@
 #work {
     display: grid;
     gap: 4rem;
+}
 
-    p {
-        font-size: $text;
-        justify-self: right;
-        width: 250px;
-        text-align: right;
+.work_subheader {
+    font-size: $text;
+    justify-self: right;
+    width: 250px;
+    text-align: right;
 
-        opacity: 0;
-        transform: translate(-10px);
-        transition: transform 700ms, opacity 700ms;
-    }
+    opacity: 0;
+    transform: translate(-10px);
+    transition: transform 700ms, opacity 700ms;
+}
 
-    p.visible {
-        opacity: 1;
-        transform: translate(0);
-    }
+.work_subheader.visible {
+    opacity: 1;
+    transform: translate(0);
 }
 
 .work_projects {
@@ -66,12 +66,10 @@
 }
 
 @media (width > 500px) {
-    #work {
 
-        p {
-            font-size: $subheader-small;
-            width: 350px;
-        }
+    .work_subheader {
+        font-size: $subheader-small;
+        width: 350px;
     }
 }
 
@@ -80,10 +78,11 @@
     #work {
         gap: 8rem;
 
-        p {
-            font-size: $subheader;
-            width: 450px;
-        }
+    }
+
+    .work_subheader {
+        font-size: $subheader;
+        width: 450px;
     }
 
     .work_projects {
