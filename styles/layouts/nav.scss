@@ -121,7 +121,7 @@ body.menu-active {
     }
 }
 
-@media (width > 800px) {
+@media (min-width: 800px) (max-width: 1000px) {
     #menu {
         gap: 1rem;
 
@@ -132,7 +132,7 @@ body.menu-active {
 }
 
 
-@media (width > 1000px) {
+@media (min-width: 1000px) {
     nav {
         border-bottom: 1px solid $accent-dark;
         width: 90%;

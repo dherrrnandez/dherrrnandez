@@ -50,7 +50,7 @@ section {
     }
 }
 
-@media (width > 1000px) {
+@media (min-width: 1000px) {
     section {
         margin-bottom: 8rem;
 
