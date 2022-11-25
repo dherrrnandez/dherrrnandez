@@ -373,14 +373,6 @@ body.menu-active #hamburger #line3 {
   animation: load 800ms 1000ms forwards;
 }
 
-@media (width > 500px) {
-  .hero_info p {
-    font-size: 1.5rem;
-  }
-  .hero_info .anchor {
-    font-size: 2rem;
-  }
-}
 @media (width > 1000px) {
   #hero {
     height: calc(100vh - 2rem);
@@ -413,6 +405,14 @@ body.menu-active #hamburger #line3 {
   #hero .hero_info .anchor .anchor_svg {
     height: 36px;
     width: 36px;
+  }
+}
+@media (width > 500px) {
+  .hero_info p {
+    font-size: 1.5rem;
+  }
+  .hero_info .anchor {
+    font-size: 2rem;
   }
 }
 #work {
