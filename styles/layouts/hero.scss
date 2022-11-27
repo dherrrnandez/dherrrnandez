@@ -6,7 +6,6 @@
     grid-template-rows: 1fr 3fr 3fr;
     height: calc(100vh - 4rem);
     padding-top: 4rem;
-
 }
 
 .hero_title {
@@ -16,7 +15,7 @@
         display: inline-block;
         overflow: hidden;
         height: $header;
-        font: 800 calc($header - 0.35rem) $inter;
+        font: 800 calc($header - 0.5rem) $inter;
     }
 
     span {
@@ -73,7 +72,7 @@
     }
 }
 
-@media (min-width: 375px) and (max-width: 1000px) {
+@media (min-width: 350px) and (max-width: 1000px) {
     .hero_info {
         p {
             font-size: $text;

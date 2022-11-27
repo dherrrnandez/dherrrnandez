@@ -327,7 +327,7 @@ body.menu-active #hamburger #line3 {
   display: inline-block;
   overflow: hidden;
   height: min(14.5vw, 7rem);
-  font: 800 calc(min(14.5vw, 7rem) - 0.35rem) "Inter", sans-serif;
+  font: 800 calc(min(14.5vw, 7rem) - 0.5rem) "Inter", sans-serif;
 }
 .hero_title span {
   position: relative;
@@ -372,7 +372,7 @@ body.menu-active #hamburger #line3 {
   animation: load 800ms 1000ms forwards;
 }
 
-@media (min-width: 375px) and (max-width: 1000px) {
+@media (min-width: 350px) and (max-width: 1000px) {
   .hero_info p {
     font-size: 1.5rem;
   }
