@@ -15,7 +15,7 @@
     h1 {
         display: inline-block;
         overflow: hidden;
-        height: $header;
+        height: calc($header + 0.5rem);
         font: 800 calc($header - 0.5rem) $inter;
     }
 
@@ -87,7 +87,7 @@
     .hero_title {
 
         h1 {
-            height: calc($header - 0.5rem);
+            height: calc($header);
             font-size: calc($header - 0.5rem);
         }
     }
