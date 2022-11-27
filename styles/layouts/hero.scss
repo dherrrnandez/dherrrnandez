@@ -10,6 +10,7 @@
 
 .hero_title {
     align-self: center;
+    min-width: 100%;
 
     h1 {
         display: inline-block;
@@ -86,8 +87,8 @@
     .hero_title {
 
         h1 {
-            height: $header;
-            font-size: $header;
+            height: calc($header - 0.5rem);
+            font-size: calc($header - 0.5rem);
         }
     }
 }

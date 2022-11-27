@@ -322,6 +322,7 @@ body.menu-active #hamburger #line3 {
 
 .hero_title {
   align-self: center;
+  min-width: 100%;
 }
 .hero_title h1 {
   display: inline-block;
@@ -380,8 +381,8 @@ body.menu-active #hamburger #line3 {
     font-size: 2rem;
   }
   .hero_title h1 {
-    height: min(14.5vw, 7rem);
-    font-size: min(14.5vw, 7rem);
+    height: calc(min(14.5vw, 7rem) - 0.5rem);
+    font-size: calc(min(14.5vw, 7rem) - 0.5rem);
   }
 }
 @media (min-width: 1000px) {
