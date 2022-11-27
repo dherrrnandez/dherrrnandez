@@ -15,7 +15,7 @@
     h1 {
         display: inline-block;
         overflow: hidden;
-        height: calc($header + 0.5rem);
+        height: calc($header + 1rem);
         font: 800 calc($header - 0.5rem) $inter;
     }
 
