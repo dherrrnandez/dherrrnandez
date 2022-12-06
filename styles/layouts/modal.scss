@@ -66,6 +66,7 @@
 
 .modal {
     p {
+        display: flex;
         color: $bg;
         font-size: $text;
     }
