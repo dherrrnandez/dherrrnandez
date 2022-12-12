@@ -78,10 +78,6 @@
         p {
             font-size: $text;
         }
-
-        .anchor {
-            font-size: $subheader-small;
-        }
     }
 
     .hero_title {
@@ -89,6 +85,24 @@
         h1 {
             height: calc($header);
             font-size: calc($header - 0.5rem);
+        }
+    }
+}
+
+@media (min-width: 350px) {
+    .hero_info {
+
+        .anchor {
+            font-size: $text;
+        }
+    }
+}
+
+@media (min-width: 450px) {
+    .hero_info {
+
+        .anchor {
+            font-size: $subheader-small;
         }
     }
 }

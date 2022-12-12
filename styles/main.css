@@ -377,12 +377,19 @@ body.menu-active #hamburger #line3 {
   .hero_info p {
     font-size: 1.5rem;
   }
-  .hero_info .anchor {
-    font-size: 2rem;
-  }
   .hero_title h1 {
     height: min(14.5vw, 7rem);
     font-size: calc(min(14.5vw, 7rem) - 0.5rem);
+  }
+}
+@media (min-width: 350px) {
+  .hero_info .anchor {
+    font-size: 1.5rem;
+  }
+}
+@media (min-width: 450px) {
+  .hero_info .anchor {
+    font-size: 2rem;
   }
 }
 @media (min-width: 1000px) {
@@ -571,7 +578,7 @@ body.menu-active #hamburger #line3 {
   }
   #about .about_heading_text_wrapper h4 {
     justify-self: right;
-    width: 300px;
+    width: 350px;
   }
   #about h4 {
     font-size: 3rem;
@@ -773,6 +780,7 @@ body.menu-active #hamburger #line3 {
 }
 
 .modal p {
+  display: flex;
   color: #1f1d1f;
   font-size: 1.5rem;
 }
