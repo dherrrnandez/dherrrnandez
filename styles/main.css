@@ -260,7 +260,7 @@ nav a:active {
 }
 #menu a {
   font-size: min(14.5vw, 7rem);
-  transition: transform 200ms;
+  transition: transform 200ms color 300ms;
 }
 #menu a:active {
   transform: translate(0, 10px);

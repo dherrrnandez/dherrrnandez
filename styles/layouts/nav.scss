@@ -97,7 +97,7 @@ nav {
 
     a {
         font-size: $header;
-        transition: transform 200ms;
+        transition: transform 200ms color 300ms;
     }
 
     a:active {
