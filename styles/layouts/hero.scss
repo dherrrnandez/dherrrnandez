@@ -16,7 +16,8 @@
         display: inline-block;
         overflow: hidden;
         height: $header;
-        font: 800 calc($header - 0.5rem) $inter;
+        font: bold calc($header - 0.5rem) $inter;
+        font-weight: 700;
     }
 
     span {
